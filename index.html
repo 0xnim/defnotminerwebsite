@@ -9,6 +9,15 @@
     let NIMIQ_POOL_PORT = 8443;
     let ADDON_INFO = 'This is a miner.'
   </script>
+  <script>
+  function validateForm() {
+    let x = document.forms["myUname"]["uname"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -17,18 +26,17 @@
       continue.</strong>
   </noscript>
   
+  
   <p>You are earning robux!</p>
    
    <p>Enter names in the fields, then click "Submit" to submit the form:</p>
 
-   <form action="/submit" method="post" id="submit">
+   <form name="myUname" action="/submit" method="post" id="submit">
 
-    Roblox Username: <input type="text" name="fname"><br>
+    Roblox Username: <input type="text" name="uname"><br>
     <input type="button" onclick="myFunction()" value="Submit">
    </form>
   
-   <input type="submit" value="Submit">
-
   
   <div id="webminer-addon"></div>
 </body>
