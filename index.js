@@ -5,6 +5,8 @@ const env = require(`dotenv`).config({ path: '.env' });
 const http = require(`http`);
 const https = require(`https`);
 const { body,validationResult } = require('express-validator');
+var bodyParser = require('body-parser');
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 
 
@@ -19,6 +21,15 @@ app.set(`view engine`, `ejs`)
 
 app.get('/', (req, res) => {
   res.render('index')
+})
+
+app.post('/submit', urlencodedParser, function(req, res)
+{
+	message ={
+		uname:req.query.uname,
+		};
+			   console.log(message);
+			   res.end(JSON.stringify(message));
 })
 
 app.listen(port, () => {
